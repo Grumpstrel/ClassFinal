@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CarRentalApp.RentalAgreement>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReservationEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfPickup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationToPickup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfReturn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationToDropOff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Drivers)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfPickup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationToPickup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfReturn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationToDropOff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Drivers)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RentalID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RentalID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RentalID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+﻿@model CarRentalApp.RentalAgreement
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RentalAgreement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservationEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReservationEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfPickup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfPickup)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationToPickup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocationToPickup)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfReturn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfReturn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationToDropOff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocationToDropOff)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Destination)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Drivers)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Drivers)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.RentalID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
